@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object Storage Example</title>
 
     <!-- Bootstrap CSS -->
@@ -11,35 +11,88 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 </head>
 
+
+
 <body>
 
+  
+
+    <button onclick="newObj()">asdasd</button>
     <script>
-        // Array of objects with Indian names
+     
+     window.onload = function () {
+            // Load data from local storage when the page loads
+            for (var i = 0; i < objectsArray.length; i++) {
+            var key = "item_" + i;
+            var objectString = localStorage.getItem(key);
+
+
+            var tableHTML =
+            '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Age</th><th>Salary</th><th>Action</th></tr></thead><tbody>';
+
+
+
+          
+            }
+    }
+         
         var objectsArray = [
-            { id: 1, firstName: 'Rahul', lastName: 'Verma', age: 28, salary: 60000, action: 'Edit' },
-            { id: 2, firstName: 'Priya', lastName: 'Patel', age: 32, salary: 75000, action: 'Edit' },
-            { id: 3, firstName: 'Amit', lastName: 'Sharma', age: 35, salary: 80000, action: 'Edit' },
-            // Add more objects as needed
+            {
+                id: 1,
+                firstName: "RRR",
+                lastName: "Ver",
+                age: 28,
+                salary: 11,
+                action: ` <button type="button">Add</button> <button type="button">Remove</button>`,
+            },
         ];
 
-        // Store each object in localStorage
-        objectsArray.forEach(function (object) {
-            var key = 'object_' + object.id;
-            localStorage.setItem(key, JSON.stringify(object));
-        });
 
-        // Generate HTML for the entire table
-        var tableHTML = '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Age</th><th>Salary</th><th>Action</th></tr></thead><tbody>';
+        function newObj() {
 
-        // Retrieve and display the objects from localStorage
-        for (var i = 1; i <= objectsArray.length; i++) {
-            var key = 'object_' + i;
+            let id = prompt(`Enter id:`);
+            let firstName = prompt(`Enter firstname`);
+            let lastName = prompt(`Enter lastname`);
+            let age = prompt(`Enter age`);
+            let salary = prompt(`Enter the salary `);
+
+            let obj = {
+                id: id,
+                firstName: firstName,
+                lastName: lastName,
+                age: age,
+                salary: salary
+            }
+            objectsArray.push(obj);
+            console.log(objectsArray);
+            for (let index = 0; index < objectsArray.length; index++) {
+
+                let key = `item_` + index;
+                localStorage.setItem(key, JSON.stringify(objectsArray[index]));
+            }
+
+             displayTop();
+
+        }
+
+        // var objectArray =
+        //     objectsArray.forEach(function (object) {
+        //         var key = "object_" + object.id;
+        //         localStorage.setItem(key, JSON.stringify(object));
+        //     });
+
+       
+
+                function displayTop(){
+
+                
+        for (var i = 0; i < objectsArray.length; i++) {
+            var key = "item_" + i;
             var objectString = localStorage.getItem(key);
 
             if (objectString) {
                 var retrievedObject = JSON.parse(objectString);
 
-                // Add a new row to the HTML table
                 tableHTML += `<tr>
                                 <td>${retrievedObject.id}</td>
                                 <td>${retrievedObject.firstName}</td>
@@ -49,19 +102,18 @@
                                 <td>${retrievedObject.action}</td>
                               </tr>`;
             } else {
-                console.log('No data found for key: ' + key);
+                console.log("No data found for key: " + key);
             }
         }
 
-        // Close the HTML table body and table
-        tableHTML += '</tbody></table></div>';
+        tableHTML += "</tbody></table></div>";
 
-        // Create a container div and set its innerHTML with the generated HTML
-        var containerDiv = document.createElement('div');
+        var containerDiv = document.createElement("div");
         containerDiv.innerHTML = tableHTML;
 
-        // Append the container div to the body
         document.body.appendChild(containerDiv);
+
+                }
     </script>
 
     <!-- Bootstrap JS (optional, for additional features like collapsible rows) -->
