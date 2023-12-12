@@ -19,6 +19,21 @@
 
     <button onclick="newObj()">asdasd</button>
     <script>
+
+
+         window.onload = function () {
+            // Load data from local storage when the page loads
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                if (key.startsWith("item_")) {
+                    var objectString = localStorage.getItem(key);
+                    var retrievedObject = JSON.parse(objectString);
+                    objectsArray.push(retrievedObject);
+                }
+            }
+            displayTop();
+        }
+
      
      window.onload = function () {
             // Load data from local storage when the page loads
