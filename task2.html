@@ -4,136 +4,448 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Object Storage Example</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
 
-
-
 <body>
+    <div class="container-fluid">
+        <div class="container mt-3">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                        Personal
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                        Account
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        Family
+                    </button>
+                    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
+                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">
+                        Employment
+                    </button>
+                    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
+                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">
+                        Asset
+                    </button>
+                </div>
+            </nav>
 
-  
+            <form action="" id="myform">
+                <div class="tab-content" id="nav-tabContent" style="border: px solid red">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                        tabindex="0">
+                        <!-- ------Personal Details -->
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Personal Details
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput" class="form-label">FirstName</label>
+                                            <input type="text" class="form-control" id="firstName"
+                                                placeholder="firstName" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">LastName</label>
+                                            <input type="text" class="form-control" id="lastName"
+                                                placeholder="lastName" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">Age</label>
+                                            <input type="number" class="form-control" id="age" placeholder="lastName" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ------------------Address--------------->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Address
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <div class="col-sm-7">
+                                                <input type="text" id="city" class="form-control" placeholder="City"
+                                                    aria-label="City" />
+                                            </div>
+                                            <div class="col-sm">
+                                                <input type="text" id="state" class="form-control" placeholder="State"
+                                                    aria-label="State" />
+                                            </div>
+                                            <div class="col-sm">
+                                                <input type="number" id="pinCode" class="form-control"
+                                                    placeholder="pincode" aria-label="Zip" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --------------------Education Details----------- -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Education Details
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row g-3">
+                                            <div class="col-sm-7">
+                                                <input type="number" id="degreePercentage" class="form-control"
+                                                    placeholder="Degree precentage" aria-label="City" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row g-3">
+                                            <div class="col-sm-7">
+                                                <input type="number" id="degreePassOutYear" class="form-control"
+                                                    placeholder="Passoutyear" aria-label="City" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row g-3">
+                                            <div class="col-sm-7">
+                                                <input type="number" id="hscPercentage" class="form-control"
+                                                    placeholder="12th precentage" aria-label="City" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn bg-success" b style="color: aliceblue"
+                                    onclick="submitData()">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-    <button onclick="newObj()">asdasd</button>
+                    <!-----------------------------Account--------------------->
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                        tabindex="0">
+                        <div class="accordion" id="accordionExample" style="border: px solid red">
+                            <!-- ---bank details----- -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Bank Details
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <!-- bank Name -->
+                                                    <label for="formGroupExampleInput" class="form-label">Bank
+                                                        Name</label>
+                                                    <input type="text" class="form-control" id="bankName"
+                                                        placeholder="bankName" />
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <!-- account name -->
+                                                    <label for="formGroupExampleInput2" class="form-label">Account
+                                                        Number</label>
+                                                    <input type="number" class="form-control" id="accountNumber"
+                                                        placeholder="accountNumber" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="mb-3">
+                                                    <!-- IFSC -->
+                                                    <label for="formGroupExampleInput2" class="form-label">IFSC
+                                                        code</label>
+                                                    <input type="number" class="form-control" id="ifscCode"
+                                                        placeholder="ifscCode" />
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mb-6">
+                                                    <!-- branch -->
+                                                    <label for="formGroupExampleInput2"
+                                                        class="form-label">Branch</label>
+                                                    <input type="text" class="form-control" id="age"
+                                                        placeholder="branch" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <!-- --------------------id-proof------------------ -->
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ID Proof
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="mb-3">
+                                            <!-- AadharCard Number -->
+                                            <label for="formGroupExampleInput2"
+                                                class="form-label">AadharCardNumber</label>
+                                            <input type="number" class="form-control" id="aadharCardNumber"
+                                                placeholder="aadharCardNumber" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <!-- PAN Number -->
+                                            <label for="formGroupExampleInput2" class="form-label">PAN Number</label>
+                                            <input type="number" class="form-control" id="panNumber"
+                                                placeholder="panNumber" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contact details -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Contact Details
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <!-- Mobile Number -->
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="inputGroup-sizing-default">Mobile
+                                                Number</span>
+                                            <input type="number" id="mobileNumber" class="form-control"
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-default" />
+                                        </div>
+                                        <!-- Emial-ID -->
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text"
+                                                id="inputGroup-sizing-default">Email-Id</span>
+                                            <input type="number" id="emailId" class="form-control"
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-default" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- submit  -->
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="button" class="btn bg-success" b style="color: aliceblue"
+                                    onclick="submitAccount()">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----------------Family----------------- -->
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                        tabindex="0">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Family Details
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"
+                                                        id="inputGroup-sizing-default">Father's Name</span>
+                                                    <input type="text" class="form-control"
+                                                        aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"
+                                                        id="inputGroup-sizing-default">Mother's Name</span>
+                                                    <input type="text" class="form-control"
+                                                        aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <select class="form-select form-select-md" aria-label="Small select example">
+                                                    <option selected>marital status</option>
+                                                    <option value="1">Single</option>
+                                                    <option value="2">Double</option>
+                                                    <option value="3">separated</option>
+                                                  </select>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"
+                                                        id="inputGroup-sizing-default">Number of family members</span>
+                                                    <input type="number" class="form-control"
+                                                        aria-label="Sizing example input"
+                                                        aria-describedby="inputGroup-sizing-default">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong>
+                                        It is hidden by default, until the collapse plugin adds
+                                        the appropriate classes that we use to style each element.
+                                        These classes control the overall appearance, as well as
+                                        the showing and hiding via CSS transitions. You can modify
+                                        any of this with custom CSS or overriding our default
+                                        variables. It's also worth noting that just about any HTML
+                                        can go within the <code>.accordion-body</code>, though the
+                                        transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong>
+                                        It is hidden by default, until the collapse plugin adds
+                                        the appropriate classes that we use to style each element.
+                                        These classes control the overall appearance, as well as
+                                        the showing and hiding via CSS transitions. You can modify
+                                        any of this with custom CSS or overriding our default
+                                        variables. It's also worth noting that just about any HTML
+                                        can go within the <code>.accordion-body</code>, though the
+                                        transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
+                        tabindex="0">
+                        ...
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- -----------script---------------- -->
+
     <script>
 
-
-         window.onload = function () {
-            // Load data from local storage when the page loads
-            for (var i = 0; i < localStorage.length; i++) {
-                var key = localStorage.key(i);
-                if (key.startsWith("item_")) {
-                    var objectString = localStorage.getItem(key);
-                    var retrievedObject = JSON.parse(objectString);
-                    objectsArray.push(retrievedObject);
-                }
-            }
-            displayTop();
+        //  --------Personal Submit--------
+        function submitData() {
+            var arrayObjectSecond = localStorage.getItem("Array")
+                ? JSON.parse(localStorage.getItem("Array"))
+                : [];
+            var dataObject = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                age: document.getElementById("age"),
+                city: document.getElementById("city"),
+                state: document.getElementById("state"),
+                pinCode: document.getElementById("pinCode"),
+                hscPercentage: document.getElementById("hscPercentage"),
+                degreePassOutyear: document.getElementById("degreePassOutYear"),
+            };
+            arrayObjectSecond.push(dataObject);
+            localStorage.setItem("Array", JSON.stringify(arrayObjectSecond));
+            document.getElementById("myform").reset();
         }
 
-     
-     window.onload = function () {
-            // Load data from local storage when the page loads
-            for (var i = 0; i < objectsArray.length; i++) {
-            var key = "item_" + i;
-            var objectString = localStorage.getItem(key);
+        //-----------------Account submit------------------
 
+        function submitAccount() {
+            var arrayObjectAccount = localStorage.getItem("accountData")
+                ? JSON.parse(localStorage.getItem("accountData"))
+                : [];
 
-            var tableHTML =
-            '<div class="table-responsive"><table class="table table-bordered"><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Age</th><th>Salary</th><th>Action</th></tr></thead><tbody>';
+            let dataObjectAccount = {
+                bankName: document.getElementById("bankName").value,
+                accountNumber: document.getElementById("accountNumber").value,
+                ifscCode: document.getElementById("ifscCode").value,
+                aadharCardNumber: document.getElementById("aadharCardNumber").value,
+                panNumber: document.getElementById("panNumber").value,
+                mobileNumber: document.getElementById("mobileNumber").value,
+                emailId: document.getElementById("emailId").value,
+            };
 
+            arrayObjectAccount.push(dataObjectAccount);
+            localStorage.setItem("accountData", JSON.stringify(arrayObjectAccount));
 
-
-          
-            }
-    }
-         
-        var objectsArray = [
-            {
-                id: 1,
-                firstName: "RRR",
-                lastName: "Ver",
-                age: 28,
-                salary: 11,
-                action: ` <button type="button">Add</button> <button type="button">Remove</button>`,
-            },
-        ];
-
-
-        function newObj() {
-
-            let id = prompt(`Enter id:`);
-            let firstName = prompt(`Enter firstname`);
-            let lastName = prompt(`Enter lastname`);
-            let age = prompt(`Enter age`);
-            let salary = prompt(`Enter the salary `);
-
-            let obj = {
-                id: id,
-                firstName: firstName,
-                lastName: lastName,
-                age: age,
-                salary: salary
-            }
-            objectsArray.push(obj);
-            console.log(objectsArray);
-            for (let index = 0; index < objectsArray.length; index++) {
-
-                let key = `item_` + index;
-                localStorage.setItem(key, JSON.stringify(objectsArray[index]));
-            }
-
-             displayTop();
-
+            document.getElementById("bankName").value = "";
+            document.getElementById("accountNumber").value = "";
+            document.getElementById("ifscCode").value = "";
+            document.getElementById("aadharCardNumber").value = "";
+            document.getElementById("panNumber").value = "";
+            document.getElementById("mobileNumber").value = "";
+            document.getElementById("emailId").value = "";
         }
-
-        // var objectArray =
-        //     objectsArray.forEach(function (object) {
-        //         var key = "object_" + object.id;
-        //         localStorage.setItem(key, JSON.stringify(object));
-        //     });
-
-       
-
-                function displayTop(){
-
-                
-        for (var i = 0; i < objectsArray.length; i++) {
-            var key = "item_" + i;
-            var objectString = localStorage.getItem(key);
-
-            if (objectString) {
-                var retrievedObject = JSON.parse(objectString);
-
-                tableHTML += `<tr>
-                                <td>${retrievedObject.id}</td>
-                                <td>${retrievedObject.firstName}</td>
-                                <td>${retrievedObject.lastName}</td>
-                                <td>${retrievedObject.age}</td>
-                                <td>${retrievedObject.salary}</td>
-                                <td>${retrievedObject.action}</td>
-                              </tr>`;
-            } else {
-                console.log("No data found for key: " + key);
-            }
-        }
-
-        tableHTML += "</tbody></table></div>";
-
-        var containerDiv = document.createElement("div");
-        containerDiv.innerHTML = tableHTML;
-
-        document.body.appendChild(containerDiv);
-
-                }
     </script>
 
-    <!-- Bootstrap JS (optional, for additional features like collapsible rows) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    <!-- --------script---------- -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
 
