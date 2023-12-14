@@ -2,445 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="  background: linear-gradient(to right, #8a9c92, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
     <div class="container-fluid">
-        <div class="container mt-3">
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                        Personal
-                    </button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                        Account
-                    </button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                        Family
-                    </button>
-                    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
-                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">
-                        Employment
-                    </button>
-                    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
-                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">
-                        Asset
-                    </button>
+        <div class="row">
+            <nav class="navbar navbar-expand bg-body-tertiary p-4"
+                style="background-image: linear-gradient(135deg, #2f3657 0%, #100f11 100%);">
+                <div class="container-fluid d-flex justify-content-center ">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4 " style="color: rgb(124, 124, 124);" aria-current="page"
+                                href="http://127.0.0.1:5500/firstTrial.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4 " aria-current="page" style="color: rgb(243, 243, 243);"
+                                href="http://127.0.0.1:5500/seconfpageTrial.html">Tableformat</a>
+                        </li>
+                    </ul>
+
                 </div>
             </nav>
-
-            <form action="" id="myform">
-                <div class="tab-content" id="nav-tabContent" style="border: px solid red">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
-                        tabindex="0">
-                        <!-- ------Personal Details -->
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                        Personal Details
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">
-                                        <div class="mb-3">
-                                            <label for="formGroupExampleInput" class="form-label">FirstName</label>
-                                            <input type="text" class="form-control" id="firstName"
-                                                placeholder="firstName" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="formGroupExampleInput2" class="form-label">LastName</label>
-                                            <input type="text" class="form-control" id="lastName"
-                                                placeholder="lastName" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="formGroupExampleInput2" class="form-label">Age</label>
-                                            <input type="number" class="form-control" id="age" placeholder="lastName" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ------------------Address--------------->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                        aria-controls="flush-collapseTwo">
-                                        Address
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">
-                                        <div class="row g-3">
-                                            <div class="col-sm-7">
-                                                <input type="text" id="city" class="form-control" placeholder="City"
-                                                    aria-label="City" />
-                                            </div>
-                                            <div class="col-sm">
-                                                <input type="text" id="state" class="form-control" placeholder="State"
-                                                    aria-label="State" />
-                                            </div>
-                                            <div class="col-sm">
-                                                <input type="number" id="pinCode" class="form-control"
-                                                    placeholder="pincode" aria-label="Zip" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- --------------------Education Details----------- -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                        aria-controls="flush-collapseThree">
-                                        Education Details
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">
-                                        <div class="row g-3">
-                                            <div class="col-sm-7">
-                                                <input type="number" id="degreePercentage" class="form-control"
-                                                    placeholder="Degree precentage" aria-label="City" />
-                                            </div>
-                                        </div>
-                                        <br />
-                                        <div class="row g-3">
-                                            <div class="col-sm-7">
-                                                <input type="number" id="degreePassOutYear" class="form-control"
-                                                    placeholder="Passoutyear" aria-label="City" />
-                                            </div>
-                                        </div>
-                                        <br />
-                                        <div class="row g-3">
-                                            <div class="col-sm-7">
-                                                <input type="number" id="hscPercentage" class="form-control"
-                                                    placeholder="12th precentage" aria-label="City" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn bg-success" b style="color: aliceblue"
-                                    onclick="submitData()">
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-----------------------------Account--------------------->
-
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
-                        tabindex="0">
-                        <div class="accordion" id="accordionExample" style="border: px solid red">
-                            <!-- ---bank details----- -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Bank Details
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-3">
-                                                    <!-- bank Name -->
-                                                    <label for="formGroupExampleInput" class="form-label">Bank
-                                                        Name</label>
-                                                    <input type="text" class="form-control" id="bankName"
-                                                        placeholder="bankName" />
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="mb-3">
-                                                    <!-- account name -->
-                                                    <label for="formGroupExampleInput2" class="form-label">Account
-                                                        Number</label>
-                                                    <input type="number" class="form-control" id="accountNumber"
-                                                        placeholder="accountNumber" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="mb-3">
-                                                    <!-- IFSC -->
-                                                    <label for="formGroupExampleInput2" class="form-label">IFSC
-                                                        code</label>
-                                                    <input type="number" class="form-control" id="ifscCode"
-                                                        placeholder="ifscCode" />
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="mb-6">
-                                                    <!-- branch -->
-                                                    <label for="formGroupExampleInput2"
-                                                        class="form-label">Branch</label>
-                                                    <input type="text" class="form-control" id="age"
-                                                        placeholder="branch" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <!-- --------------------id-proof------------------ -->
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        ID Proof
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="mb-3">
-                                            <!-- AadharCard Number -->
-                                            <label for="formGroupExampleInput2"
-                                                class="form-label">AadharCardNumber</label>
-                                            <input type="number" class="form-control" id="aadharCardNumber"
-                                                placeholder="aadharCardNumber" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <!-- PAN Number -->
-                                            <label for="formGroupExampleInput2" class="form-label">PAN Number</label>
-                                            <input type="number" class="form-control" id="panNumber"
-                                                placeholder="panNumber" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Contact details -->
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Contact Details
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <!-- Mobile Number -->
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Mobile
-                                                Number</span>
-                                            <input type="number" id="mobileNumber" class="form-control"
-                                                aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" />
-                                        </div>
-                                        <!-- Emial-ID -->
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text"
-                                                id="inputGroup-sizing-default">Email-Id</span>
-                                            <input type="number" id="emailId" class="form-control"
-                                                aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-default" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- submit  -->
-                            <div class="d-flex justify-content-center mt-4">
-                                <button type="button" class="btn bg-success" b style="color: aliceblue"
-                                    onclick="submitAccount()">
-                                    Submit
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ----------------Family----------------- -->
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                        tabindex="0">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Family Details
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="input-group mb-3">
-                                                    <span class="input-group-text"
-                                                        id="inputGroup-sizing-default">Father's Name</span>
-                                                    <input type="text" class="form-control"
-                                                        aria-label="Sizing example input"
-                                                        aria-describedby="inputGroup-sizing-default">
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="input-group mb-3">
-                                                    <span class="input-group-text"
-                                                        id="inputGroup-sizing-default">Mother's Name</span>
-                                                    <input type="text" class="form-control"
-                                                        aria-label="Sizing example input"
-                                                        aria-describedby="inputGroup-sizing-default">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <select class="form-select form-select-md" aria-label="Small select example">
-                                                    <option selected>marital status</option>
-                                                    <option value="1">Single</option>
-                                                    <option value="2">Double</option>
-                                                    <option value="3">separated</option>
-                                                  </select>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="input-group mb-3">
-                                                    <span class="input-group-text"
-                                                        id="inputGroup-sizing-default">Number of family members</span>
-                                                    <input type="number" class="form-control"
-                                                        aria-label="Sizing example input"
-                                                        aria-describedby="inputGroup-sizing-default">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong>
-                                        It is hidden by default, until the collapse plugin adds
-                                        the appropriate classes that we use to style each element.
-                                        These classes control the overall appearance, as well as
-                                        the showing and hiding via CSS transitions. You can modify
-                                        any of this with custom CSS or overriding our default
-                                        variables. It's also worth noting that just about any HTML
-                                        can go within the <code>.accordion-body</code>, though the
-                                        transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong>
-                                        It is hidden by default, until the collapse plugin adds
-                                        the appropriate classes that we use to style each element.
-                                        These classes control the overall appearance, as well as
-                                        the showing and hiding via CSS transitions. You can modify
-                                        any of this with custom CSS or overriding our default
-                                        variables. It's also worth noting that just about any HTML
-                                        can go within the <code>.accordion-body</code>, though the
-                                        transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
-                        tabindex="0">
-                        ...
-                    </div>
-                </div>
-            </form>
         </div>
+        <div class="container ">
+
+            <div id="TableContent" class="shadow p-3 mt-5 bg-body-tertiary rounded " style=""></div>
+        </div>
+
     </div>
 
-    <!-- -----------script---------------- -->
+
 
     <script>
 
-        //  --------Personal Submit--------
-        function submitData() {
-            var arrayObjectSecond = localStorage.getItem("Array")
-                ? JSON.parse(localStorage.getItem("Array"))
-                : [];
-            var dataObject = {
-                firstName: document.getElementById("firstName").value,
-                lastName: document.getElementById("lastName").value,
-                age: document.getElementById("age"),
-                city: document.getElementById("city"),
-                state: document.getElementById("state"),
-                pinCode: document.getElementById("pinCode"),
-                hscPercentage: document.getElementById("hscPercentage"),
-                degreePassOutyear: document.getElementById("degreePassOutYear"),
-            };
-            arrayObjectSecond.push(dataObject);
-            localStorage.setItem("Array", JSON.stringify(arrayObjectSecond));
-            document.getElementById("myform").reset();
+
+        GetData();
+
+        function GetData() {
+            let personalData = localStorage.getItem("Array");
+            let speData = JSON.parse(personalData);
+            console.log(speData[1]);
+            tableTop(speData);
         }
 
-        //-----------------Account submit------------------
+        function tableTop(objectsArray) {
 
-        function submitAccount() {
-            var arrayObjectAccount = localStorage.getItem("accountData")
-                ? JSON.parse(localStorage.getItem("accountData"))
-                : [];
-
-            let dataObjectAccount = {
-                bankName: document.getElementById("bankName").value,
-                accountNumber: document.getElementById("accountNumber").value,
-                ifscCode: document.getElementById("ifscCode").value,
-                aadharCardNumber: document.getElementById("aadharCardNumber").value,
-                panNumber: document.getElementById("panNumber").value,
-                mobileNumber: document.getElementById("mobileNumber").value,
-                emailId: document.getElementById("emailId").value,
-            };
-
-            arrayObjectAccount.push(dataObjectAccount);
-            localStorage.setItem("accountData", JSON.stringify(arrayObjectAccount));
-
-            document.getElementById("bankName").value = "";
-            document.getElementById("accountNumber").value = "";
-            document.getElementById("ifscCode").value = "";
-            document.getElementById("aadharCardNumber").value = "";
-            document.getElementById("panNumber").value = "";
-            document.getElementById("mobileNumber").value = "";
-            document.getElementById("emailId").value = "";
+            var tableHTML =
+                `<table class="table table-striped-dark table-hover mt-5 shadow p-3 mt-5 bg-body-tertiary rounded " id="mytable" style="background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);" >`;
+            tableHTML += `<thead class=table-dark>
+                        <tr>
+                            <th scope="col">FirstName</th>
+                            <th scope="col">LastName</th>
+                            <th scope="col">Age</th>
+                            <th scope="col"> Action   </th>
+                            </tr>
+                                </thead>`;
+            objectsArray.forEach((retrievedObject, index) => {
+                tableHTML += `<tr>
+                                <td>${retrievedObject.firstName}</td>
+                                <td>${retrievedObject.lastName}</td>
+                                <td>${retrievedObject.age}</td>
+                                <td>  <button type="button" class="btn bg-dark" style="color: aliceblue;" >View</button></td>
+                              </tr>`;
+            });
+            tableHTML += "</table>";
+            document.getElementById("TableContent").innerHTML = tableHTML;
         }
+
+
     </script>
 
-    <!-- --------script---------- -->
+
+
+
+
+
+
+    <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
