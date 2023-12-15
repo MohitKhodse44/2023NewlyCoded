@@ -12,7 +12,8 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body style="  background: linear-gradient(to right, #8a9c92, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+<body
+    style="  background: linear-gradient(to right, #8a9c92, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
     <div class="container-fluid">
 
         <!-- navbar -->
@@ -22,11 +23,11 @@
                 <div class="container-fluid d-flex justify-content-center ">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active fs-4 " style="color: rgb(240, 240, 240);" aria-current="page"
+                            <a class="nav-link active fs-4 " style="color: rgb(249, 249, 252);" aria-current="page"
                                 href="http://127.0.0.1:5500/firstTrial.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active fs-4" aria-current="page" style="color: rgb(155, 155, 155);"
+                            <a class="nav-link active fs-4" aria-current="page" style="color: rgb(131, 130, 130);"
                                 href="http://127.0.0.1:5500/seconfpageTrial.html">Tableformat</a>
                         </li>
                     </ul>
@@ -368,7 +369,7 @@
                         <!-- submit  -->
                         <div class="d-flex justify-content-center mt-4">
                             <button type="button" class="btn bg-success" b style="color: aliceblue"
-                                onclick="submitFamily()">
+                                onclick="validateFamily()">
                                 Submit
                             </button>
                         </div>
@@ -383,7 +384,7 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Current Employment Details
+                                    Recent Employment Details
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show"
@@ -523,7 +524,7 @@
                         </div>
                         <div class="d-flex justify-content-center mt-4">
                             <button type="button" class="btn bg-success" b style="color: aliceblue"
-                                onclick="submitAsset()">
+                                onclick="validateAsset() ">
                                 Submit
                             </button>
                         </div>
@@ -551,6 +552,8 @@
             let hscPercentage = document.getElementById("hscPercentage").value;
             let degreePassOutyear = document.getElementById("degreePassOutYear").value;
 
+            let bankName = document.getElementById("bankName").value;
+
             var letter = /^[A-Za-z\s]+$/;
             var number = /\d{12}$/;
             var ageNumber = /\d{2}$/;
@@ -567,25 +570,31 @@
             else if (!state.match(letter) && state.value == null) {
                 alert(`Enter letters for State`);
             }
-            else if (!hscPercentage.match(number) && hscPercentage.value == null && hscPercentage.length > 3) {
-                alert('Enter two digit number for hsc% only')
+            else if (!hscPercentage.match(number) && hscPercentage.value == "" && hscPercentage.length > 3) {
+                alert('Enter two digit number for hsc% ')
+            }
+            else if (bankName == "") {
+                alert(`Enter BankDetails also`);
             }
             else {
-                submitData();
-                alert('data submission started');
-            }
+               // submitData();
+               alert(`go for account details`)
         }
+    }
 
         //---Account validate------
 
         function validateAccount() {
-            bankName = document.getElementById("bankName").value,
-                accountNumber = document.getElementById("accountNumber").value,
-                ifscCode = document.getElementById("ifscCode").value,
-                aadharCardNumber = document.getElementById("aadharCardNumber").value,
-                panNumber = document.getElementById("panNumber").value,
-                mobileNumber = document.getElementById("mobileNumber").value;
-            emailId = document.getElementById("emailId").value;
+            let bankName = document.getElementById("bankName").value;
+            let accountNumber = document.getElementById("accountNumber").value;
+            let ifscCode = document.getElementById("ifscCode").value;
+            let aadharCardNumber = document.getElementById("aadharCardNumber").value;
+            let panNumber = document.getElementById("panNumber").value;
+            let mobileNumber = document.getElementById("mobileNumber").value;
+            let emailId = document.getElementById("emailId").value;
+
+            let fatherName = document.getElementById("fatherName").value;
+
             var letter = /^[A-Za-z\s]+$/;
             var number = /\d{12}$/;
             if (bankName == "") {
@@ -595,16 +604,20 @@
                 alert(`Enter proper ac/no`);
             }
             else if (ifscCode == null) {
-                alert(`Enter ifsc code`);
+                alert(`Enter 12 digit ifsc code`);
             }
             else if (!aadharCardNumber.match(number) && aadharCardNumber.value == null) {
-                alert(`Enter proper aadhar Number`);
+                alert(`Enter proper 12 digit aadhar Number`);
             }
             else if (mobileNumber == "") {
                 alert(`Enter 10 digit Number`);
             }
+            else if (fatherName == "") {
+                alert(`Enter fathername & all Family Details.`);
+            }
             else {
-                submitAccount();
+
+               alert(`go for Family details`)
             }
         }
 
@@ -622,6 +635,10 @@
             let PExperience = document.getElementById("PExperience").value;
             let PTechnology = document.getElementById("PTechnology").value;
 
+            let skills = document.getElementById("skills").value;
+
+
+
             var letter = /^[A-Za-z\s]+$/;
             var number = /\d{12}$/;
             if (!Company.match(letter) && Company.value == null) {
@@ -636,10 +653,50 @@
             else if (!PjTitle.match(letter) && PjTitle.value == null) {
                 alert(`Enter past job title`);
             }
+            else if (skills == "") {
+                alert(`fill up the skills box please`);
+            }
             else {
-                submitEmployment();
+              // submitEmployment();
+              alert(`go for asset details`)
             }
         }
+
+        // validate Family-------
+
+        function validateFamily() {
+            let fatherName = document.getElementById("fatherName").value;
+            let Company = document.getElementById("Company").value;
+
+            if (fatherName == "") {
+                alert(`Enter Fathername `);
+            }
+            else if (Company == '') {
+                alert(`Enter Current Company Name`);
+            }
+            else {
+               // submitFamily();
+               alert(`go for emplyoment details`)
+            }
+        }
+
+        // ---validate Asset-----
+
+        function validateAsset() {
+            let skills = document.getElementById("skills");
+
+            if (skills == "") {
+                alert(`Fill up skills box `);
+            }
+            else{
+                submitData();
+                submitAccount();
+                submitFamily();
+                submitEmployment();
+                submitAsset();
+            }
+        }
+
 
 
         //  --------Personal Submit--------
@@ -767,9 +824,7 @@
         //   --------asset------
 
         function submitAsset() {
-
             var arrayAsset = localStorage.getItem("asset") ? JSON.parse(localStorage.getItem("asset")) : [];
-
             let dataObjectAsset = {
                 bio: document.getElementById("bio").value,
                 skills: document.getElementById("skills").value,
